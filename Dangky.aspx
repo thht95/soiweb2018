@@ -18,7 +18,7 @@
             <br /><br />
             <asp:Button runat="server" ID="btndangky" Text="Đăng ký"  OnClick="btndangky_Click" />
             &nbsp;&nbsp;
-            <input type="reset" name="reset" id="reset" value="Đặt lại" />
+            <input type="reset" name="reset" id="reset" value="Reset" />
         </div>
     </form>
 
