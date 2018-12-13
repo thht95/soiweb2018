@@ -19,4 +19,7 @@
             </ItemTemplate>
         </asp:Repeater>
     </div>
+    <div>
+      <asp:Button runat="server" ID="btnMark" Text="Đánh dấu"> </asp:Button>
+    </div>
 </asp:Content>
