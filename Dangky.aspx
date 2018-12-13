@@ -13,7 +13,7 @@
             <input type="email" id="emailRegister" name="emailRegister" placeholder="Your Mail" required="required"/>
             <h4>Mật khẩu</h4>
              <input type="password" id="PasswordRegister" name="PasswordRegister" placeholder="Password" />
-            <h4>Nhập lại mật khẩu</h4>
+            <h4>Nhập lại mật khẩu đi</h4>
             <input type="password" id="RePasswordRegister" name="RePasswordRegister" placeholder="Confirm Password"/>
             <br /><br />
             <asp:Button runat="server" ID="btndangky" Text="Đăng ký"  OnClick="btndangky_Click" />
