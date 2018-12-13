@@ -1,0 +1,182 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    /*font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;*/
+    font-size: 80%;
+}
+
+p,a,h1,h2,h3,h4,h5,h6{
+    font-family: 'Times New Roman', Times, serif;
+}
+p{
+    font-size: 15px;
+}
+
+#narbar {
+    height: 30px;
+    background: #75c6f1;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.search {
+    float: right;
+    margin-right: 10%;
+    margin-top: -3px;
+}
+
+input#btnSearch {
+    border-radius: 4px;
+
+}
+
+input[type="text"] {
+    border-radius: 6px;
+    border: none;
+}
+
+#menutop {
+    height: 30px;
+    background: #000;
+    position: fixed;
+    width: 100%;
+    top: 30px;
+    left: 0;
+    padding: 0;
+    margin: 0;
+}
+
+#menu, #narbarcontent {
+    width: 80%;
+    margin: auto;
+}
+
+#menu ul, #narbarcontent ul{
+    list-style: none;
+    margin: 0;
+    padding-top: 7px;
+    padding-left: 0;
+}
+
+ul.dsBlog_luotxem {
+    list-style: none;
+    margin-left: -15px;
+}
+
+.dsBlog_luotxem a {
+    text-decoration: none;
+}
+
+#menu ul li, #narbarcontent ul li {
+    float: left;
+}
+
+#narbarcontent ul li{
+    float:left;
+    padding: 0 15px;
+}
+
+#login {
+    float: right;
+}
+
+    #menu  a {
+        padding-right: 20px;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+#menu a:hover, #loginloregister a:hover {
+    color: #d1eb8e;
+    text-decoration: underline;
+}
+#loginloregister a {
+    padding: 0 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#maincontent {
+    width: 90%;
+    margin: 30px auto;
+    min-height:600px;
+}
+
+#rightcontent {
+    float: right;
+    width: 20%;
+    margin: 40px 0;
+}
+
+#content {
+    float: left;
+    width: 75%;
+    margin: 40px 0;
+
+}
+
+#ndright {
+    padding: 10px 15px;
+    text-align: justify;
+}
+
+#content h1 {
+    margin: 0;
+    padding: 20px 15px;
+    font-family: 'Times New Roman';
+    font-size: 24px;
+    color: black;
+    border-bottom: 1px solid #efefef;
+    box-shadow: 0 0 4px 0 #eee;
+}
+
+
+#ndcontent {
+    padding: 20px 30px;
+    width: 80%;
+    margin: auto;
+}
+
+ul.dsBlog {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.dsBlog li {
+    width: 40%;
+    padding: 0 5%;
+    text-align:justify;
+}
+
+.dsBlog li a{
+    text-decoration: none;
+}
+
+#rightcontent h1 {
+    margin: 0;
+    padding: 20px 15px;
+    font-family: 'Times New Roman';
+    font-size: 24px;
+    border-bottom: 1px solid #efefef;
+    box-shadow: 0 0 4px 0 #eee;
+}
+
+#footer {
+    clear: both;
+    background: black;
+    width: 100%;
+}
+
+#ndfooter {
+    width: 80%;
+    margin: auto;
+    color: white;
+    padding: 15px;
+}

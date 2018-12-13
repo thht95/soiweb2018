@@ -1,0 +1,87 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Home.master.cs" Inherits="BTLweb.Home" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Blog du lịch</title>
+    <link href="Theme/Style.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+<div id="narbar">
+    <div id="narbarcontent">
+        <ul>
+            <li><a href="index.aspx"><img src="images/icon_fb.png" /></a></li>
+            <li><a href="index.aspx"><img src="images/icon_twitter.png" /></a></li>
+            <li><a href="index.aspx"><img src="images/icon_in.png" /></a></li>
+            <li><a href="index.aspx"><img src="images/icon_ytb.png" /></a></li>
+
+        </ul>
+    </div>
+    <form action="Search.aspx" method="get" class="search">
+        <input type="text" id="search" name="search" placeholder="Search" >
+        <button ID="btnSearch" >Search</button>
+    </form>
+</div>
+<div id="menutop">
+    <div id="menu">
+        <ul>
+            <li><a href="index.aspx">Trang chủ</a></li>
+            <asp:Repeater ID="rptBlog" runat="server">
+                <ItemTemplate>
+                    <li><a href="Blog.aspx?idblog=<%# Eval("IDBlog") %>"><%# Eval("noiDung") %></a></li>
+                </ItemTemplate>
+            </asp:Repeater>
+        </ul>
+    </div>
+    <div id="loginloregister" style="float:right; color:white" runat="server">
+        <%
+        if (Convert.ToInt32(Session["login"]) == 0)
+        {
+            %>
+                <a href="Dangnhap.aspx" style="font-size: 15px">Đăng nhập</a>
+                <span>|</span>
+                <a href="Dangky.aspx" style="font-size: 15px">Đăng ký</a>
+        <%}
+        else
+        {
+            %>
+        <a href="DangXuat.aspx" >Đăng xuất</a>
+        <%} %>
+                    
+    </div>
+</div>
+<div id="maincontent">
+    <div id="rightcontent">
+        <h1>Các Blog có lượt xem cao nhất</h1>
+        <div id="ndright">
+            <ul class="dsBlog_luotxem">
+                <asp:Repeater runat="server" ID="rptChitiet_luotxem">
+                    <ItemTemplate>
+                        <li><a href="chitiet.aspx?idblog=<%# Eval("IDBlog") %>&id=<%# Eval("ID") %>">
+                            <p style="text-align:center"><img src="<%# Eval("sAnh") %>" style="width:100%;" /></p>
+                            <p><%# Eval("tieuDe") %></p></a></li>
+                    </ItemTemplate>
+                </asp:Repeater>
+            </ul>
+        </div>
+    </div>
+    <div id="content">
+        <div style="text-align: justify;">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+    </div>
+</div>
+<div id="footer">
+    <div id="ndfooter">
+        CopyRight: Nguyễn Ánh Vân, Sinh viên Đại học Mở Hà Nội.<br />
+        Liên hệ Trực tuyến: nguyenanhvan1212@gmail.com.
+    </div>
+</div>
+
+
+</body>
+</html>
